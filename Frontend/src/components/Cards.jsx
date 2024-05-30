@@ -7,7 +7,7 @@ function Cards({ item }) {
     const body = { products: [item] };
     const headers = { "Content-Type": "application/json" };
 
-    const response = await fetch("http://localhost:4001/api/create-checkout-session", {
+    const response = await fetch("https://bookshop-awkr.onrender.com/api/create-checkout-session", {
       method: "POST",
       body: JSON.stringify(body),
       headers: headers,
