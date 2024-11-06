@@ -90,6 +90,7 @@ function Login() {
                 <Link
                   to="/signup"
                   className="underline text-blue-500 cursor-pointer"
+                  onClick={() => document.getElementById("my_modal_3").close()}
                 >
                   Signup
                 </Link>
