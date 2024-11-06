@@ -3,6 +3,7 @@ import { useState } from "react";
 import Login from "./Login";
 import Logout from "./Logout";
 import { useAuth } from "../context/AuthProvider";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [authUser, setAuthUser] = useAuth();
@@ -39,16 +40,16 @@ function Navbar() {
   const navItems = (
     <>
       <li>
-        <a href="/">Home</a>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <a href="/course">Course</a>
+        <Link to="/course">Course</Link>
       </li>
       <li>
-        <a href="/contact">Contact</a>
+        <Link to="/contact">Contact</Link>
       </li>
       <li>
-        <a href="/about">About</a>
+        <Link to="/about">About</Link>
       </li>
     </>
   );
@@ -91,9 +92,9 @@ function Navbar() {
                 {navItems}
               </ul>
             </div>
-            <a href="/" className=" text-2xl font-bold cursor-pointer">
+            <Link to="/" className=" text-2xl font-bold cursor-pointer">
               bookMart
-            </a>
+            </Link>
           </div>
           <div className="navbar-end space-x-3">
             <div className="navbar-center hidden lg:flex">
@@ -148,14 +149,14 @@ function Navbar() {
               <Logout />
             ) : (
               <div className="">
-                <a
+                <Link
                   className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer"
                   onClick={() =>
                     document.getElementById("my_modal_3").showModal()
                   }
                 >
                   Login
-                </a>
+                </Link>
                 <Login />
               </div>
             )}
